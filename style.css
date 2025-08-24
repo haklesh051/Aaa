@@ -1,0 +1,24 @@
+:root{--bg:#09080a;--card:#0f0e12;--accent:#ff3b30;--muted:#999;--text:#f5f5f7}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+body{margin:0;background:radial-gradient(ellipse at top,#0b0b0d 0%,#060506 100%);color:var(--text)}
+.wrap{max-width:880px;margin:28px auto;padding:20px}
+.hdr{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(45deg,#2b2b2f,#1b1a1d);display:grid;place-items:center;font-weight:800;color:var(--accent);box-shadow:0 8px 30px rgba(255,59,48,.06)}
+.hdr h1{margin:0;font-size:20px;letter-spacing:0.6px}
+.hdr small{color:var(--muted);font-size:11px;margin-left:8px}
+.tag{font-size:12px;color:var(--muted);margin-top:6px}
+
+.card{background:var(--card);border:1px solid rgba(255,255,255,0.03);padding:16px;border-radius:12px;margin:12px 0;box-shadow:0 6px 30px rgba(0,0,0,.6)}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
+input{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.row{display:flex;gap:8px;margin-top:10px}
+button{padding:10px 14px;border-radius:10px;border:0;background:linear-gradient(90deg,#ff3b30,#ff7a5a);color:#111;font-weight:700;cursor:pointer}
+button#clr{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.result{margin-top:12px;padding:10px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+.hidden{display:none}
+.big{font-size:28px;font-weight:800;color:var(--accent);margin-top:6px}
+.muted{color:var(--muted);font-size:12px;margin-top:8px}
+.hist{display:flex;flex-direction:column;gap:8px;max-height:260px;overflow:auto}
+.hist .row{background:rgba(255,255,255,0.02);padding:8px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.ftr{text-align:center;color:var(--muted);margin-top:16px;font-size:13px}
+@media(min-width:700px){.hdr{flex-direction:row;align-items:center;justify-content:space-between}.card{padding:18px}}

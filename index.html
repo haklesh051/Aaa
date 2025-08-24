@@ -1,46 +1,23 @@
-<!doctype html>
-<html lang="hi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dark Fairness Lab — EDU only</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Aviator Fair Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark">
-  <main class="wrap">
-    <header class="hdr">
-      <div class="logo">DFL</div>
-      <h1>Dark Fairness Lab <small>— Educational only</small></h1>
-      <div class="tag">Instant demo • No network • No prediction</div>
-    </header>
-
-    <section class="card">
-      <label>Seed (blank → random)
-        <input id="seed" placeholder="e.g. my-seed-123" />
-      </label>
-
-      <div class="row">
-        <button id="go">▶ Instant Simulate</button>
-        <button id="rand">Rnd Seed</button>
-        <button id="clr">Reset</button>
-      </div>
-
-      <div id="result" class="result hidden">
-        <div><strong>Seed:</strong> <code id="out-seed"></code></div>
-        <div><strong>SHA-256:</strong> <code id="out-hash"></code></div>
-        <div class="big">Demo Multiplier: <span id="out-mul"></span>x</div>
-        <div class="muted">Educational only — NOT a prediction tool</div>
-      </div>
-    </section>
-
-    <section class="card small">
-      <h3>History (instant)</h3>
-      <div id="history" class="hist"></div>
-    </section>
-
-    <footer class="ftr">© <span id="year"></span> — For learning only</footer>
-  </main>
-
-  <script src="app.js"></script>
+<body>
+  <div class="container">
+    <h1>🚀 Aviator Fairness Calculator</h1>
+    <p>Enter seeds and check the round result (educational demo)</p>
+    
+    <input type="text" id="serverSeed" placeholder="Server Seed">
+    <input type="text" id="clientSeed" placeholder="Client Seed">
+    <input type="number" id="nonce" placeholder="Nonce (e.g. 1)">
+    
+    <button onclick="calculate()">Calculate Result</button>
+    
+    <div id="output"></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
